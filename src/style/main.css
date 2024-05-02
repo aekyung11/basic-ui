@@ -4,17 +4,25 @@ body {
   font-family: "Noto Sans KR", sans-serif;
 }
 
+.header,
+.visual,
+.main,
+.slogan,
+.footer {
+  width: var(--container-size, 940px);
+  margin: 0 auto;
+}
+
 /* 헤더 */
 .header {
   background-color: yellow;
-  width: 940px;
 }
 
 /* 비주얼 */
 .visual {
   background-color: pink;
   /* inline-size와 width의 차이 */
-  inline-size: 940px;
+  /* inline-size: 940px; */
 }
 
 /* 메인 콘텐츠 */
