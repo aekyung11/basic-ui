@@ -39,6 +39,7 @@ body {
   /* height: 60vh; */
   display: flow-root;
   min-height: 450px;
+  padding: 0 15px;
   /* display: flex; */
   /* flex-flow: flex-direction / flex-wrap */
   /* flex-flow: row nowrap; */
@@ -49,15 +50,12 @@ body {
 
 .group {
   border: 1px solid red;
+  margin: 0 15px;
 }
 
 /* .main .group:nth-child(n + 2) {
   margin-left: 60px;
 } */
-
-.main .group:nth-child(-n + 2) {
-  margin-right: 60px;
-}
 
 .group:nth-child(1) {
   width: 250px;
