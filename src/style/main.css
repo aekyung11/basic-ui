@@ -8,6 +8,7 @@ body {
   font-family: "Noto Sans KR", sans-serif;
 }
 
+/* 선택자 그룹핑 */
 .header,
 .visual,
 .main,
@@ -21,6 +22,7 @@ body {
 .header {
   background-color: yellow;
   height: 10vh;
+  padding: 0 50px;
 }
 
 /* 비주얼 */
@@ -34,22 +36,43 @@ body {
 /* 메인 콘텐츠 */
 .main {
   background-color: skyblue;
-  height: 60vh;
-  display: flex;
+  /* height: 60vh; */
+  display: flow-root;
+  min-height: 450px;
+  /* display: flex; */
   /* flex-flow: flex-direction / flex-wrap */
-  flex-flow: row nowrap;
-  justify-content: flex-start; /* 메인 축 */
-  align-items: stretch; /* 교체 축 */
+  /* flex-flow: row nowrap; */
+  /* justify-content: space-between; */
+  /* align-items: stretch; */
+  /* padding: 28px 16px 36px; */
 }
 
 .group {
   border: 1px solid red;
 }
 
+.group1 {
+  float: left;
+  background-color: orange;
+  width: 250px;
+}
+
+.group2 {
+  width: 380px;
+  float: left;
+  background-color: silver;
+}
+
+.group3 {
+  width: 190px;
+  float: left;
+}
+
 /* 슬로건 */
 .slogan {
   background-color: lime;
   height: 10vh;
+  clear: both;
 }
 
 /* 푸터 */
