@@ -36,47 +36,37 @@ body {
 /* 메인 콘텐츠 */
 .main {
   background-color: skyblue;
-  /* height: 60vh; */
   display: flow-root;
   min-height: 450px;
-  padding: 0 15px;
   /* display: flex; */
   /* flex-flow: flex-direction / flex-wrap */
   /* flex-flow: row nowrap; */
   /* justify-content: space-between; */
   /* align-items: stretch; */
-  /* padding: 28px 16px 36px; */
-}
-
-.group-wrapper {
-  float: right;
+  padding: 28px 16px 36px;
 }
 
 .group {
   border: 1px solid red;
-  margin: 0 15px;
+  float: left;
 }
 
-/* .main .group:nth-child(n + 2) {
-  margin-left: 60px;
-} */
+.group:nth-child(n + 2) {
+  margin-left: 44px;
+}
 
 .group1 {
   width: 250px;
-  float: left;
   background-color: orange;
 }
 
 .group2 {
   width: 380px;
-  float: left;
   background-color: silver;
-  margin-right: 0;
 }
 
 .group3 {
   width: 190px;
-  float: left;
   background-color: hotpink;
 }
 
@@ -94,4 +84,16 @@ body {
 .footer-inner {
   background-color: yellow;
   height: 10vh;
+}
+
+/* --------------------------------------------------- */
+/*          flex를 지원하는 웹 브라우저를 위한 스타일           */
+/* --------------------------------------------------- */
+
+@supports (display: flex) {
+  .main {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+  }
 }
