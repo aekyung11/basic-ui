@@ -1,0 +1,43 @@
+/* 단위 */
+/* 절대단위 - px */
+/* 상대단위 - em (부모로부터 상속) */
+/* 상대단위 - rem (html 요소를 기준으로 계산) */
+/* 상대단위 - vw (뷰포트를 기준으로 계산) */
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: "SUIT Variable", sans-serif;
+}
+
+h1 {
+  /* font-family: "SUIT Variable", sans-serif;
+  line-height: 1;
+  font-size: 60px;
+  font-weight: 100;
+  font-style: italic;
+  font-variant: small-caps; */
+  font: bold italic small-caps 60px /1 "SUIT Variable";
+}
+
+div {
+  font-size: 1.5em;
+}
+
+/* em - 부모로부터 상속받은 글자 크기에 비례 */
+/* rem - root를 기준으로 글자 크기 설정 */
+p {
+  font-size: 2rem;
+  line-height: 1; /* number 단위 */
+}
+
+/* 지정하지 않았을 때 html의 기본 글자 크기: 16px */
+
+/* viewport 크기 */
+@media (max-width: 767px) {
+  p {
+    font-size: 3vw;
+  }
+}
