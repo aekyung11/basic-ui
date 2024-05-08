@@ -11,6 +11,7 @@
 
 /* gradiant 배경, 배경 이미지 */
 body {
+  margin: 0;
   font-family: "SUIT Variable", sans-serif;
   background: #ccc;
   background-image: url(/images/bg_flower.png),
@@ -47,6 +48,23 @@ body {
 }
 
 /* 비주얼 */
+@keyframes moveEffect {
+  0% {
+    font-size: 12px;
+    top: 0;
+    /* inset-block-start: top의 논리 속성 */
+    left: 0;
+    /* inset-inline-start: left의 논리 속성 */
+  }
+  100% {
+    font-size: 24px;
+    top: 75px;
+    /* inset-block-start: top의 논리 속성 */
+    left: 400px;
+    /* inset-inline-start: left의 논리 속성 */
+  }
+}
+
 .visual {
   /* background-color: pink; */
   height: 120px;
@@ -79,6 +97,15 @@ body {
   background-image: url(/images/ani_flower_03.png),
     url(/images/ani_flower_04.png);
   background-position: 300px 0, 800px 30px;
+}
+
+.visual-text {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  animation-name: moveEffect;
+  animation-duration: 5000ms;
+  animation-fill-mode: forwards;
+  position: absolute;
+  z-index: 1;
 }
 
 /* 메인 콘텐츠 */
