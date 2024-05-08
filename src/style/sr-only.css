@@ -1,0 +1,17 @@
+.sr-only {
+  background-color: red;
+  position: absolute;
+  /* 최소한의 높이와 넓이는 있어야 스크린리더가 읽을 수 있음, 같은 이유로 font-size: 0; 안 됨 */
+  inline-size: 1px; /* width */
+  block-size: 1px; /* height */
+  margin: -1px;
+
+  /* 숨길 수 있는 모든 속성 */
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  clip-path: polygon(0 0, 0 0, 0 0);
+  padding: 0;
+  white-space: nowrap;
+  border-width: 0;
+  /* inset-block-start: -9999px; /* top: -9999px; */
+}
