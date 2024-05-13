@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>문서 제목</title>
+    <link
+      href="https://cdn.jsdelivr.net/gh/sun-typeface/SUIT/fonts/variable/woff2/SUIT-Variable.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="/components/css/pagination.css" />
+    <script>
+      // DOM 선택
+      const links = document.querySelectorAll(".pagination a");
+
+      // 함수 구현
+      const handleLinkClick = (event) => {
+        // 기본 동작을 취소합니다.
+        event.preventDefault();
+
+        // 모든 링크에서 is-selected 클래스를 제거합니다.
+        links.forEach((link) => {
+          link.classList.remove("is-selected");
+        });
+
+        // 클릭된 링크에 is-selected 클래스를 추가합니다.
+        event.target.classList.add("is-selected");
+      };
+
+      // a 요소에 이벤트를 바인딩
+      links.forEach((link) => {
+        link.addEventListener("click", handleLinkClick);
+      });
+    </script>
+  </head>
+  <body>
+    <h1>페이지네이션</h1>
+    <nav class="pagination" aria-label="페이지네이션">
+      <button type="button" aria-label="이전 페이지">
+        <span class="fas fa-angle-left" aria-hidden="true"></span>
+      </button>
+      <ol role="none">
+        <li><a href="/">1</a></li>
+        <li><a href="/">2</a></li>
+        <li><a href="/" class="is-selected" aria-current="page">3</a></li>
+        <li><a href="/">4</a></li>
+        <li><a href="/">5</a></li>
+        <li><a href="/">6</a></li>
+        <li><a href="/">7</a></li>
+        <li><a href="/">8</a></li>
+        <li><a href="/">9</a></li>
+        <li><a href="/">10</a></li>
+      </ol>
+      <button type="button" aria-label="다음 페이지">
+        <span class="fas fa-angle-right" aria-hidden="true"></span>
+      </button>
+    </nav>
+
+    <div class="pagination" role="navigation" aria-label="페이지네이션">
+      <button class="button button-prev" type="button" aria-label="이전 페이지">
+        <span class="fas fa-angle-left" aria-hidden="true"></span>
+      </button>
+      <div>
+        <a href="/">1</a>
+        <a href="/">2</a>
+        <a href="/" class="is-selected" aria-current="page">3</a>
+        <a href="/">4</a>
+        <a href="/">5</a>
+        <a href="/">6</a>
+        <a href="/">7</a>
+        <a href="/">8</a>
+        <a href="/">9</a>
+        <a href="/">10</a>
+      </div>
+      <button class="button button-next" type="button" aria-label="다음 페이지">
+        <span class="fas fa-angle-right" aria-hidden="true"></span>
+      </button>
+    </div>
+  </body>
+</html>
