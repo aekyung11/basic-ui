@@ -45,3 +45,30 @@
   flex-flow: row nowrap;
   align-items: center;
 }
+
+.svg-icon-search {
+  width: 150px;
+  height: 150px;
+
+  path {
+    fill: red;
+
+    @media (prefers-color-scheme: dark) {
+      fill: blue;
+    }
+  }
+}
+
+/* svg 배경 이미지 */
+.plus {
+  width: 100px;
+  height: 100px;
+  /* border: 1px solid red; */
+  /* background-image: url(/images/icons/plus.svg); */
+  /* background-repeat: no-repeat; */
+  /* background-size: 100% 100%; */
+  background-color: yellow;
+  mask-image: url(/images/icons/plus.svg);
+  mask-repeat: no-repeat;
+  mask-size: 100% 100%;
+}
